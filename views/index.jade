@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to route:
+    p
+      code #{route}
+  ul
+    li
+      a(href='/') /
+    li
+      a(href='/users') /users
+    li
+      a(href='/test-1/') /test-1/
+    li
+      a(href='/test-1/index-1') /test-1/index-1
+    li
+      a(href='/test-1/index-2') /test-1/index-2
+    li
+      a(href='/test-2/controller-1/') /test-2/controller-1/
+    li
+      a(href='/test-2/controller-1/route-1/') /test-2/controller-1/route-1/
+    li
+      a(href='/test-2/controller-1/route-2/') /test-2/controller-1/route-2/
+    li
+      a(href='/test-2/controller-2/') /test-2/controller-2/
+    li
+      a(href='/test-2/controller-2/route-1/') /test-2/controller-2/route-1/
+    li
+      a(href='/test-2/controller-2/route-2/') /test-2/controller-2/route-2/
