@@ -29,8 +29,9 @@ app.use('/', index);
 app.use('/users', users);
 */
 
-const routeUtils = require('./route-utils');
+const routeUtils = require('express-recursive-routes');
 routeUtils.mountRoutes(app);
+
 // same as:
 // routeUtils.mountRoutes(app, './routes', '');
 
