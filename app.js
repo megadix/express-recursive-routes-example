@@ -29,7 +29,10 @@ app.use('/', index);
 app.use('/users', users);
 */
 
-require('./route-utils').mountRoutes(app, './routes', '');
+const routeUtils = require('./route-utils');
+routeUtils.mountRoutes(app);
+// same as:
+// routeUtils.mountRoutes(app, './routes', '');
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

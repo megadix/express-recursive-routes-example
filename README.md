@@ -7,26 +7,45 @@ The project was created with IntelliJ IDEA "Node Express App" wizard using
 
 # Quickstart
 
-Build:
+**NOTE** you can use `npm` instead of `yarn` in the commands below.
+
+## Build
 
 ```
 yarn install
 ```
 
-or
-
-```
-npm install
-```
-
-Run:
+## Run
 
 ```
 yarn start
 ```
 
-or
+You can now access application at:  
+http://localhost:3000/
 
+# Usage
+
+Instead of manually requiring all routes, e.g.:
+
+```js
+var index = require('./routes/index');
+var users = require('./routes/users');
+
+app.use('/', index);
+app.use('/users', users);
 ```
-npm start
+
+you can let `route-utils.js` function `mountRoutes()` do the magic:
+
+```js
+const routeUtils = require('./route-utils');
+routeUtils.mountRoutes(app, './my-routes-folder', '/api');
+```
+
+If your routes are under `./routes` directory and you want to map them directly under root path you can skip the 2nd and
+3rd parameters:
+
+```js
+routeUtils.mountRoutes(app);
 ```
