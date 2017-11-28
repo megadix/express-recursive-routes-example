@@ -32,7 +32,7 @@ module.exports.mountRoutes = function (app, rootDir = './routes', basePath = '')
         const filename = path.basename(filePath, '.js');
         const isIndex = filename.toLowerCase() === 'index';
 
-        const routePath = `${requestPath}/${isIndex ? '' : filename}`;
+        const routePath = `${basePath}${requestPath}/${isIndex ? '' : filename}`;
         console.log(`Mounting: ${routePath} => ${filePath}`);
         app.use(routePath, require(filePath));
     }
