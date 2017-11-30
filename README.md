@@ -1,6 +1,7 @@
 # Automatically configure recursive routes in Express.js
 
-Example Node + Express.js project that shows how to recursively configure all routes in a directoy.
+Examples for [express-recursive-routes](https://github.com/megadix/express-recursive-routes), a small library to
+recursively configure Express.js routes in a folder.
 
 The project was created with IntelliJ IDEA "Node Express App" wizard using
 [express-generator](https://www.npmjs.com/package/express-generator) version 4.15.5
@@ -26,26 +27,12 @@ http://localhost:3000/
 
 # Usage
 
-Instead of manually requiring all routes, e.g.:
+There are different scenarios available, each showing a different feature of `express-recursive-routes`.
 
-```js
-var index = require('./routes/index');
-var users = require('./routes/users');
+To activate them you need to define the `SCENARIO` environment variable, e.g.:
 
-app.use('/', index);
-app.use('/users', users);
+```
+SCENARIO=custom-dir node bin/www
 ```
 
-you can let `route-utils.js` function `mountRoutes()` do the magic:
-
-```js
-const routeUtils = require('./route-utils');
-routeUtils.mountRoutes(app, './my-routes-folder', '/api');
-```
-
-If your routes are under `./routes` directory and you want to map them directly under root path you can skip the 2nd and
-3rd parameters:
-
-```js
-routeUtils.mountRoutes(app);
-```
+For available scenarios see `app.js` source code.

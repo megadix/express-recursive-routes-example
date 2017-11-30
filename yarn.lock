@@ -202,9 +202,9 @@ express-api-routes-list@1.1.2:
   dependencies:
     cli-table "^0.3.1"
 
-express-recursive-routes@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/express-recursive-routes/-/express-recursive-routes-2.0.0.tgz#6703c72e0cee51c3183bbfc76e674a3a913cb280"
+express-recursive-routes@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/express-recursive-routes/-/express-recursive-routes-2.0.1.tgz#b1a08b0ba4c6997861bb82d2dddf3eafc5dab126"
 
 express@~4.15.5:
   version "4.15.5"
