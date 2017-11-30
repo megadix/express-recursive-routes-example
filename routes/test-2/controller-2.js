@@ -1,16 +1,11 @@
 var express = require('express');
 var router = express.Router();
+var common = require('../../common');
 
-router.get('/', function (req, res, next) {
-    res.render('index', {route: '/test-2/controller-2/'});
-});
+router.get('/', common.handler);
 
-router.get('/route-1', function (req, res, next) {
-    res.render('index', {route: '/test-2/controller-2/route-1/'});
-});
+router.get('/route-1', common.handler);
 
-router.get('/route-2', function (req, res, next) {
-    res.render('index', {route: '/test-2/controller-2/route-2/'});
-});
+router.get('/route-2', common.handler);
 
 module.exports = router;

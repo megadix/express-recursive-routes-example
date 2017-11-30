@@ -30,7 +30,24 @@ app.use('/users', users);
 */
 
 const routeUtils = require('express-recursive-routes');
-routeUtils.mountRoutes(app);
+
+const scenario = process.env.SCENARIO || 'default';
+
+switch (scenario) {
+    case 'default':
+        routeUtils.mountRoutes(app);
+        break;
+    case 'custom-dir':
+        routeUtils.mountRoutes(app, './routes-custom-dir');
+        break;
+    case 'custom-substring-1':
+        routeUtils.mountRoutes(app, './routes-custom-substring-1', '', '.route.js');
+        break;
+    case 'custom-substring-2':
+        routeUtils.mountRoutes(app, './routes-custom-substring-2', '', 'route.');
+        break;
+
+}
 
 // same as:
 // routeUtils.mountRoutes(app, './routes', '');
@@ -52,5 +69,7 @@ app.use(function (err, req, res, next) {
     res.status(err.status || 500);
     res.render('error');
 });
+
+require('./common').init(require('express-api-routes-list')(app));
 
 module.exports = app;

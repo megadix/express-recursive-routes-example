@@ -4,8 +4,8 @@ var common = require('../../common');
 
 router.get('/', common.handler);
 
-router.get('/route-1', common.handler);
+router.get('/index-1', common.handler);
 
-router.get('/route-2', common.handler);
+router.get('/index-2', common.handler);
 
 module.exports = router;
