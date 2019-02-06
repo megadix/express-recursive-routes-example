@@ -3,9 +3,18 @@ extends layout
 block content
   h1= title
   p Scenario: #{scenario}
-  p Welcome to route:
-    code #{route}
+  p Current route:
+    ul
+      li Method:
+        code  #{method}
+      li Path:
+        code  "#{route}"
+
   ul
   each val in routesTable
     li
-      a(href=val) #{val}
+      - if (val[0] === 'GET')
+        a(href=val[1]) #{val[0]} #{val[1]}
+      - else
+        span #{val[0]} #{val[1]}
+
