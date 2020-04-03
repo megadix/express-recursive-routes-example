@@ -11,7 +11,7 @@
     "debug": "^4.1.1",
     "express": "^4.16.4",
     "express-api-routes-list": "^1.1.2",
-    "express-recursive-routes": "^2.0.1",
+    "express-recursive-routes": "file:../express-recursive-routes/",
     "jade": "^1.11.0",
     "morgan": "^1.9.1"
   }
