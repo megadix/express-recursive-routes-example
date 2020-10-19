@@ -1,5 +1,5 @@
 {
-  "name": "express-recursive-routes",
+  "name": "express-recursive-routes-example",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -11,8 +11,11 @@
     "debug": "^4.1.1",
     "express": "^4.16.4",
     "express-api-routes-list": "^1.1.2",
-    "express-recursive-routes": "file:../express-recursive-routes/",
+    "express-recursive-routes": "^2.1.1",
     "jade": "^1.11.0",
     "morgan": "^1.9.1"
+  },
+  "engines": {
+    "yarn": "YARN NO LONGER USED - use npm instead."
   }
 }
