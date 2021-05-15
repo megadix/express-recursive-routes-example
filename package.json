@@ -13,7 +13,7 @@
     "express-api-routes-list": "^1.1.2",
     "express-recursive-routes": "^2.1.1",
     "morgan": "^1.9.1",
-    "pug": "^3.0.0"
+    "pug": "^3.0.1"
   },
   "engines": {
     "yarn": "YARN NO LONGER USED - use npm instead."
